@@ -12,13 +12,15 @@ function App() {
     <BrowserRouter>
       <section className="max-w-7xl mx-auto">
         <LayoutHeader />
-        <main className=" flex justify-center items-center">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/detail/:id" element={<Detail />} />
-            <Route path="/archieve" element={<Archieve />} />
-            <Route path="/add" element={<Add />} />
-          </Routes>
+        <main className="flex justify-center items-center">
+          <div className="m-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/detail/:id" element={<Detail />} />
+              <Route path="/archieve" element={<Archieve />} />
+              <Route path="/add" element={<Add />} />
+            </Routes>
+          </div>
         </main>
         <LayoutFooter />
       </section>

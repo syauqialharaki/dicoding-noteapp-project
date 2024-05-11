@@ -7,7 +7,7 @@ function NoteList({ notes }) {
   }
 
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-wrap content-start ">
       {notes.map((note) => (
         <NoteItem key={note.id} {...note} />
       ))}
