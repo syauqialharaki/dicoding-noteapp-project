@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import Archieve from "./pages/Archieve";
 import Add from "./pages/Add";
+import DetailWrapper from "./pages/Detail";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <div className="m-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/detail/:id" element={<Detail />} />
+              <Route path="/detail/:id" element={<DetailWrapper />} />
               <Route path="/archieve" element={<Archieve />} />
               <Route path="/add" element={<Add />} />
             </Routes>

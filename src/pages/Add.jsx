@@ -1,7 +1,13 @@
 import React from "react";
 
-const Add = () => {
-  return <p>Alhamdulillah mendarat di Add</p>;
-};
+class Add extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return <p>Syauqi</p>;
+  }
+}
 
 export default Add;

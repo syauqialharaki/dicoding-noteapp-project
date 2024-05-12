@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 import { showFormattedDate } from "../utils/index";
 import { Link } from "react-router-dom";
 
-function NoteDetail({ title, createdAt, body }) {
+function NoteDetail({ id, title, createdAt, body }) {
   const FormattedDate = showFormattedDate(createdAt);
+  console.log(id);
   console.log(title);
   console.log(createdAt);
   console.log(FormattedDate);
