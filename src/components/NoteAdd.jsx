@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 class NoteAdd extends React.Component {
   constructor(props) {
@@ -71,4 +71,9 @@ class NoteAdd extends React.Component {
     );
   }
 }
+
+NoteAdd.propType = {
+  addNote: PropTypes.func.isRequired,
+};
+
 export default NoteAdd;
