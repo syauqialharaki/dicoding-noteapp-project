@@ -1,6 +1,5 @@
 import React from "react";
 import NoteDetail from "../components/NoteDetail";
-import { getAllNotes } from "../utils/local-data";
 import { getNote } from "../utils/local-data";
 import { useParams } from "react-router-dom";
 
@@ -20,7 +19,7 @@ class Detail extends React.Component {
 
   render() {
     if (this.state.notes === null) {
-      return <p>TIdak ada catatan</p>;
+      return <p>Tidak ada catatan</p>;
     } else {
       return (
         <section>

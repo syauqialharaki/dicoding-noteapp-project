@@ -7,6 +7,7 @@ import Detail from "./pages/Detail";
 import Archieve from "./pages/Archieve";
 import Add from "./pages/Add";
 import DetailWrapper from "./pages/Detail";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/detail/:id" element={<DetailWrapper />} />
               <Route path="/archieve" element={<Archieve />} />
-              <Route path="/add" element={<Add />} />
+              <Route path="/new" element={<Add />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
         </main>
