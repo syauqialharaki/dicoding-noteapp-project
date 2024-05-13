@@ -1,11 +1,11 @@
 import React from "react";
 import NoteDetail from "../components/NoteDetail";
-import { getNote } from "../utils/local-data";
+import { getNote, deleteNote } from "../utils/local-data";
 import { useParams } from "react-router-dom";
 
 function DetailWrapper() {
   const { id } = useParams();
-  return <Detail id={id} />;
+  return <Detail id={id} onDelete={deleteNote} />;
 }
 
 class Detail extends React.Component {
@@ -23,7 +23,7 @@ class Detail extends React.Component {
     } else {
       return (
         <section>
-          <NoteDetail {...this.state.notes} />
+          <NoteDetail {...this.state.notes} onDelete={this.props.onDelete} />
         </section>
       );
     }

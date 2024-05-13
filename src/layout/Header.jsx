@@ -1,8 +1,22 @@
-// LayoutHeader.jsx
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function LayoutHeader() {
+  const location = useLocation();
+
+  const getPageTitle = () => {
+    switch (location.pathname) {
+      case "/":
+        return "Daftar Catatan";
+      case "/new":
+        return "Buat Catatan";
+      case "/archieve":
+        return "Arsip Catatan";
+      default:
+        return "Isi Catatan";
+    }
+  };
+
   return (
     <header className="w-full fixed top-0 left-0 z-50 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,6 +51,13 @@ function LayoutHeader() {
             </div>
           </div>
         </nav>
+      </div>
+      <div className="bg-white shadow">
+        <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+          <h1 className="text-3xl font-bold tracking-tight text-gray-900 text-center">
+            {getPageTitle()}
+          </h1>
+        </div>
       </div>
     </header>
   );

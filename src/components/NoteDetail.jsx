@@ -8,10 +8,10 @@ class NoteDetail extends React.Component {
     super(props);
   }
 
-  onDeleteHandler() {
-    const { id, onDelete } = this.props;
-    this.props.onDelete(id);
-  }
+  onDeleteHandler = () => {
+    const { id, onDelete, navigate } = this.props;
+    onDelete(id);
+  };
   render() {
     const { title, createdAt, body } = this.props;
     const FormattedDate = showFormattedDate(createdAt);
